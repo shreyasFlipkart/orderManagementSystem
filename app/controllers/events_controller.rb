@@ -9,11 +9,16 @@ class EventsController < ApplicationController
 
   # POST /addEvent
   def create
-    @event = Event.new(event_params)
-    if @event.save
-      render json: @event, status: :created
+    existing_event = Event.find_by(name: event_params[:name])
+    if existing_event
+      render json: { error: "Event with the name '#{event_params[:name]}' already exists." }, status: :unprocessable_entity
     else
-      render json: @event.errors, status: :unprocessable_entity
+      @event = Event.new(event_params)
+      if @event.save
+        render json: @event, status: :created
+      else
+        render json: @event.errors, status: :unprocessable_entity
+      end
     end
   end
 

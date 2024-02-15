@@ -36,8 +36,6 @@ class OrdersController < ApplicationController
   def state
     order = Order.find_by(id: params[:id])
     if order
-      # Access the associated State model through the cur_state association
-      # and then get the name attribute of the State.
       state_name = order.cur_state&.name
       if state_name
         render json: { id: order.id, state: state_name }
