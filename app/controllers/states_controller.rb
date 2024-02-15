@@ -8,11 +8,17 @@ class StatesController < ApplicationController
 
   # POST /addState
   def create
-    @state = State.new(state_params)
-    if @state.save
-      render json: @state, status: :created
+    existing_state = State.find_by(name: state_params[:name])
+
+    if existing_state
+      render json: { error: "State with the name '#{state_params[:name]}' already exists." }, status: :unprocessable_entity
     else
-      render json: @state.errors, status: :unprocessable_entity
+      @state = State.new(state_params)
+      if @state.save
+        render json: @state, status: :created
+      else
+        render json: @state.errors, status: :unprocessable_entity
+      end
     end
   end
 
