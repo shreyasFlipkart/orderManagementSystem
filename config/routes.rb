@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
 
   # Api's to get add or delete states
-
   get '/getStates', to: 'states#index'
   post '/addState', to: 'states#create'
   delete '/deleteState/:id', to: 'states#destroy'

@@ -19,9 +19,16 @@ class EventsController < ApplicationController
 
   # DELETE /deleteEvent/:id
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
-    head :no_content
+    event = Event.find(params[:id])
+    used_in_transitions = Transition.where(event_id: event.id)
+
+    if used_in_transitions.exists?
+      transition_ids = used_in_transitions.pluck(:id)
+      render json: { error: "Event cannot be deleted because it is used in transitions (IDs: #{transition_ids.join(', ')})" }, status: :forbidden
+    else
+      event.destroy
+      render json: { success: "Event deleted successfully." }, status: :ok
+    end
   end
 
   private
