@@ -3,8 +3,8 @@ require 'test_helper'
 class OrdersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @order = orders(:one)
-    @default_state = states(:default)
-    @processing_state = states(:processing_state) # Assumes a 'states' fixture for processing state
+    @default_state = states(:created)
+    @processing_state = states(:processing) # Assumes a 'states' fixture for processing state
   end
 
   test "should get index" do
@@ -25,7 +25,8 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     post "/order/#{@order.id}/payment_initiated", as: :json
     assert_response :ok
     @order.reload
-    assert_equal "Processing", @order.cur_state.name
+
+    assert_equal "Processing", @order.cur_state.name, "Order state should be updated to Processing"
   end
 
   test "should get orders by state" do
@@ -34,12 +35,8 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get order state" do
-    puts @order.inspect # Temporarily inspect the order
-    puts @order.cur_state_id.inspect # Temporarily inspect the associated state
     get order_state_url(id: @order.id)
     assert_response :success
-    # get order_state_url(id: @order.id)
-    # assert_response :success
   end
 
   test "should get order created at" do

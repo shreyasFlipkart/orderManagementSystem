@@ -2,7 +2,7 @@ require 'test_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @event = events(:one) # Using the fixture
+    @event = events(:payment_initiated) # Using the fixture
   end
 
   test "should get index" do
@@ -30,7 +30,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete event not used in transitions" do
-    event_not_in_transitions = events(:two)
+    event_not_in_transitions = events(:not_used_in_transaction)
     assert_difference('Event.count', -1) do
       delete "/deleteEvent/#{event_not_in_transitions.id}"
     end
@@ -38,7 +38,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should not delete event used in transitions" do
-    Transition.create!(event: @event, from_state: states(:one), to_state: states(:two))
+    Transition.create!(event: @event, from_state: states(:created), to_state: states(:processing))
 
     assert_no_difference('Event.count') do
       delete "/deleteEvent/#{@event.id}"

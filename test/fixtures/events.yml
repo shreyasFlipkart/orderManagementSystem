@@ -27,3 +27,6 @@ order_store_delivery:
 
 delivery_failed:
   name: delivery_failed
+
+not_used_in_transaction:
+  name: not_used_in_transaction

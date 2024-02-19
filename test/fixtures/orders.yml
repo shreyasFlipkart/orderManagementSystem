@@ -1,9 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cur_state_id: 1
+  cur_state_id: <%= State.find_by(name: 'Created').id %>
   order_timestamp: 2024-02-14 13:48:43
 
-two:
-  cur_state_id: 1
-  order_timestamp: 2024-02-14 13:48:43
