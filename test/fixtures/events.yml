@@ -1,11 +1,29 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+payment_initiated:
+  name: payment_initiated
 
-one:
-  name: "Package Confirmation"
+payment_succesful:
+  name: payment_succesful
 
-two:
-  name: "Not in Transition"
+payment_failed:
+  name: payment_failed
 
-three:
-  name: "In Transition"
+order_packaged:
+  name: order_packaged
 
+order_shipped:
+  name: order_shipped
+
+order_delivered:
+  name: order_delivered
+
+return_requested:
+  name: return_requested
+
+order_cancelled:
+  name: order_cancelled
+
+order_store_delivery:
+  name: order_store_delivery
+
+delivery_failed:
+  name: delivery_failed

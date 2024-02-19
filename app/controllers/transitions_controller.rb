@@ -8,9 +8,9 @@ class TransitionsController < ApplicationController
     transitions_with_names = @transitions.map do |transition|
       {
         id: transition.id,
-        event_name: transition.event.name,
-        from_state_name: transition.from_state.name,
-        to_state_name: transition.to_state.name
+        event_name: transition.event&.name || 'Event Missing',
+        from_state_name: transition.from_state&.name || 'From State Missing',
+        to_state_name: transition.to_state&.name || 'To State Missing'
       }
     end
 

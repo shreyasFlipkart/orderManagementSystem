@@ -76,7 +76,8 @@ class OrdersController < ApplicationController
 
   def default_state_id
     # Determine and return a default state ID, if applicable
-    1
+    State.find_by(name: 'Created')&.id
+
   end
 
 

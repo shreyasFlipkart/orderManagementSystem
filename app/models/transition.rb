@@ -2,11 +2,11 @@ class Transition < ApplicationRecord
 belongs_to :event
 belongs_to :from_state, class_name: 'State', foreign_key: 'from_state_id'
 belongs_to :to_state, class_name: 'State', foreign_key: 'to_state_id'
-validates :event_id, presence: true
-validates :from_state_id, presence: true
-validates :to_state_id, presence: true
-# Ensure that from_state and to_state are different
+validates :event, presence: true
+validates :from_state, presence: true
+validates :to_state, presence: true
 validate :from_and_to_state_must_be_different
+
 
 private
 

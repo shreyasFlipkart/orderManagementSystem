@@ -3,7 +3,7 @@ require 'test_helper'
 class StateTest < ActiveSupport::TestCase
   # Setup a state object before each test method
   setup do
-    @state = states(:one)
+    @state = states(:created)
   end
 
   # Test case to ensure the state object is initially valid

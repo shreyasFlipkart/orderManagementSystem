@@ -5,9 +5,9 @@ class TransitionTest < ActiveSupport::TestCase
   #   assert true
   # end
   setup do
-    @event = events(:one)
-    @from_state = states(:one)
-    @to_state = states(:two)
+    @event = events(:payment_initiated)
+    @from_state = states(:created)
+    @to_state = states(:processing)
     @transition = Transition.new(event: @event, from_state: @from_state, to_state: @to_state)
   end
 

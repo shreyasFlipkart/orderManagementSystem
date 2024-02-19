@@ -9,7 +9,7 @@ class EventTest < ActiveSupport::TestCase
 
   class EventTest < ActiveSupport::TestCase
     def setup
-      @event = events(:one)
+      @event = events(:payment_initiated)
     end
 
     test 'valid event' do

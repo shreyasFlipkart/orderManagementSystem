@@ -1,11 +1,54 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+payment_initiation_to_processing:
+  event: payment_initiated
+  from_state: created
+  to_state: processing
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the "{}" from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+payment_success_to_processed:
+  event: payment_succesful
+  from_state: processing
+  to_state: processed
+
+payment_failure_to_void:
+  event: payment_failed
+  from_state: processing
+  to_state: void
+
+order_packaged_to_ready:
+  event: order_packaged
+  from_state: processed
+  to_state: ready
+
+order_shipped_to_shipped:
+  event: order_shipped
+  from_state: ready
+  to_state: shipped
+
+order_delivered_to_delivered:
+  event: order_delivered
+  from_state: shipped
+  to_state: delivered
+
+return_request_to_void:
+  event: return_requested
+  from_state: delivered
+  to_state: void
+
+order_cancel_from_processed:
+  event: order_cancelled
+  from_state: processed
+  to_state: void
+
+order_cancel_from_ready:
+  event: order_cancelled
+  from_state: ready
+  to_state: void
+
+order_store_delivery_to_delivered:
+  event: order_store_delivery
+  from_state: ready
+  to_state: delivered
+
+delivery_failed_to_processed:
+  event: delivery_failed
+  from_state: shipped
+  to_state: processed
