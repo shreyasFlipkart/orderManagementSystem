@@ -3,4 +3,9 @@
 one:
   name: "Package Confirmation"
 
+two:
+  name: "Not in Transition"
+
+three:
+  name: "In Transition"
 
