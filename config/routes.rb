@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   get '/getOrders', to: 'orders#index'
   post '/createOrder', to: 'orders#create'
   delete '/deleteOrder/:id', to: 'orders#destroy'
-  get '/getOrders/:state', to: 'orders#by_state', as: 'get_orders_by_state'
+  get '/getOrdersByState/:state', to: 'orders#by_state', as: 'get_orders_by_state'
   get '/getOrder/:id/state', to: 'orders#state', as: 'order_state'
   get '/getOrder/:id/createdAt', to: 'orders#created_at', as: 'order_created_at'
+  get '/getOrders/:id', to: 'orders#show', as: 'get_order'
+
 
   post '/order/:id/:event', to: 'orders#trigger_event'
 

@@ -11,6 +11,12 @@ class OrdersController < ApplicationController
       render json: { error: "Order not found or no applicable transition found for event." }, status: :unprocessable_entity
     end
   end
+  def show
+    order = Order.find(params[:id])
+    render json: order
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "Order not found" }, status: :not_found
+  end
 
   # GET /getOrders
   def index

@@ -18,4 +18,5 @@ class OrderReturnRequestTest < ActionDispatch::IntegrationTest
     @order.reload
     assert_equal @void_state.id, @order.cur_state_id
   end
+
 end

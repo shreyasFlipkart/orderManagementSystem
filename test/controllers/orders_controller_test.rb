@@ -50,6 +50,16 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     end
     assert_response :no_content
   end
+  test "should get order details by id" do
+    get "/getOrders/#{@order.id}"
+    assert_response :success
+
+    json_response = JSON.parse(@response.body)
+    assert_equal @order.id, json_response['id']
+    assert_equal @order.cur_state_id, json_response['cur_state_id']
+    assert_equal @order.created_at.as_json, json_response['created_at']
+    # Add more assertions here for other fields in your order details as needed
+  end
 
   test "should return not found for invalid state" do
     get "/getOrders/NonexistentState"
