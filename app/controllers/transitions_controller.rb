@@ -14,6 +14,7 @@ class TransitionsController < ApplicationController
       }
     end
 
+    Rails.application.config.access_logger.info "Accessed getTransitions API"
     render json: transitions_with_names
   end
 
@@ -24,26 +25,30 @@ class TransitionsController < ApplicationController
 
     if event.blank? || from_state.blank? || to_state.blank?
       render json: { error: "Invalid event or state names" }, status: :unprocessable_entity
+      Rails.application.config.error_logger.error "Transition creation failed: Invalid event or state names"
       return
     end
 
     existing_transition = Transition.find_by(event: event, from_state: from_state, to_state: to_state)
     if existing_transition.present?
       render json: { error: "Transition already exists for the given event and state names." }, status: :unprocessable_entity
+      Rails.application.config.error_logger.error "Transition creation failed: Transition already exists"
       return
     end
 
     duplicate_transition = Transition.where(from_state: from_state, to_state: to_state).exists?
-
     if duplicate_transition
       render json: { error: "A transition with the specified from and to states already exists." }, status: :unprocessable_entity
+      Rails.application.config.error_logger.error "Transition creation failed: Duplicate from and to states"
       return
     end
 
     @transition = Transition.new(event: event, from_state: from_state, to_state: to_state)
     if @transition.save
+      Rails.application.config.application_logger.info "Transition created: #{@transition.id}"
       render json: @transition, status: :created
     else
+      Rails.application.config.error_logger.error "Transition creation failed: Errors: #{@transition.errors.full_messages.join(", ")}"
       render json: @transition.errors, status: :unprocessable_entity
     end
   end
@@ -51,6 +56,7 @@ class TransitionsController < ApplicationController
   def destroy
     @transition = Transition.find(params[:id])
     @transition.destroy
+    Rails.application.config.application_logger.info "Transition deleted: #{@transition.id}"
     head :no_content
   end
 
