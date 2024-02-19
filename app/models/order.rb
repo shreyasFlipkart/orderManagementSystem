@@ -1,5 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :cur_state, class_name: 'State', foreign_key: 'cur_state_id'
+  validates :cur_state_id, presence: true
+  validates :order_timestamp, presence: true
 
   # Method to handle event and transition state
   def handle_event(event_name)

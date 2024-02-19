@@ -61,6 +61,18 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+gem 'test-unit', '~> 3.5'
+gem 'test-unit-activesupport', '~> 1.0'
+gem 'shoulda', '~> 4.0'
+gem 'shoulda-matchers', '~> 4.0', require: false
+gem 'rack-test', require: "rack/test"
+gem 'mocha', '~> 1.14', require: false
+gem 'ci_reporter', '~> 2.0', require: false
+gem 'minitest', require: false
+gem 'parallel_tests', '~> 3.7'
+gem 'webmock', '~> 3.14', require: false
+
+
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]

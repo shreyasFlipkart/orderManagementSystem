@@ -47,14 +47,17 @@
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.5.6, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v3.40.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ci_reporter (v2.1.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.2.3, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.4.1, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crack (v1.0.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.3.4, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashdiff (v1.1.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v2.0.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.7.2, rbenv: 3.2.2) [gem]" level="application" />
@@ -66,6 +69,7 @@
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.22.2, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mocha (v1.16.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.7.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mutex_m (v0.2.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.5.6, rbenv: 3.2.2) [gem]" level="application" />
@@ -75,6 +79,9 @@
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.4.0.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.16.2, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parallel (v1.24.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parallel_tests (v3.13.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="power_assert (v2.0.3, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="psych (v5.1.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v5.0.4, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v6.4.2, rbenv: 3.2.2) [gem]" level="application" />
@@ -97,16 +104,22 @@
     <orderEntry type="library" scope="PROVIDED" name="rouge (v4.2.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.17.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda (v4.0.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-context (v2.0.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v4.5.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.7.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.3.3, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stringio (v3.1.0, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test-unit (v3.6.2, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="test-unit-activesupport (v1.0.4, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.3.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v2.0.2, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.1, rbenv: 3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="webmock (v3.20.0, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrick (v1.8.1, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.10, rbenv: 3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.6, rbenv: 3.2.2) [gem]" level="application" />
@@ -296,8 +309,7 @@
       <value>file://$MODULE_DIR$/vendor/assets</value>
     </entry>
   </component>
-  <component name="RakeTasksCache-v2" failedReloadsCounter="1">
-    <option name="failedReloadsCounter" value="1" />
+  <component name="RakeTasksCache-v2">
     <option name="myRootTask">
       <RakeTaskImpl id="rake">
         <subtasks>
@@ -479,6 +491,38 @@
           <RakeTaskImpl id="log">
             <subtasks>
               <RakeTaskImpl description="Truncate all/specified *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)" fullCommand="log:clear" id="clear" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="parallel">
+            <subtasks>
+              <RakeTaskImpl description="Create test databases via db:create --&gt; parallel:create[num_cpus]" fullCommand="parallel:create[count]" id="create[count]" />
+              <RakeTaskImpl description="Drop test databases via db:drop --&gt; parallel:drop[num_cpus]" fullCommand="parallel:drop[count]" id="drop[count]" />
+              <RakeTaskImpl description="Run features in parallel with parallel:features[num_cpus]" fullCommand="parallel:features[count,pattern,options,pass_through]" id="features[count,pattern,options,pass_through]" />
+              <RakeTaskImpl description="Run features-spinach in parallel with parallel:features-spinach[num_cpus]" fullCommand="parallel:features-spinach[count,pattern,options,pass_through]" id="features-spinach[count,pattern,options,pass_through]" />
+              <RakeTaskImpl description="Load dumped schema for test databases via db:schema:load --&gt; parallel:load_schema[num_cpus]" fullCommand="parallel:load_schema[count]" id="load_schema[count]" />
+              <RakeTaskImpl description="Load structure for test databases via db:schema:load --&gt; parallel:load_structure[num_cpus]" fullCommand="parallel:load_structure[count]" id="load_structure[count]" />
+              <RakeTaskImpl description="Update test databases via db:migrate --&gt; parallel:migrate[num_cpus]" fullCommand="parallel:migrate[count]" id="migrate[count]" />
+              <RakeTaskImpl description="Update test databases by dumping and loading --&gt; parallel:prepare[num_cpus]" fullCommand="parallel:prepare[count]" id="prepare[count]" />
+              <RakeTaskImpl description="Launch given rake command in parallel" fullCommand="parallel:rake[command,count]" id="rake[command,count]" />
+              <RakeTaskImpl description="Rollback test databases via db:rollback --&gt; parallel:rollback[num_cpus]" fullCommand="parallel:rollback[count]" id="rollback[count]" />
+              <RakeTaskImpl description="Load the seed data from db/seeds.rb via db:seed --&gt; parallel:seed[num_cpus]" fullCommand="parallel:seed[count]" id="seed[count]" />
+              <RakeTaskImpl description="Setup test databases via db:setup --&gt; parallel:setup[num_cpus]" fullCommand="parallel:setup[count]" id="setup[count]" />
+              <RakeTaskImpl description="Run spec in parallel with parallel:spec[num_cpus]" fullCommand="parallel:spec[count,pattern,options,pass_through]" id="spec[count,pattern,options,pass_through]" />
+              <RakeTaskImpl description="Run test in parallel with parallel:test[num_cpus]" fullCommand="parallel:test[count,pattern,options,pass_through]" id="test[count,pattern,options,pass_through]" />
+              <RakeTaskImpl description="" fullCommand="parallel:create" id="create" />
+              <RakeTaskImpl description="" fullCommand="parallel:drop" id="drop" />
+              <RakeTaskImpl description="" fullCommand="parallel:features" id="features" />
+              <RakeTaskImpl description="" fullCommand="parallel:features-spinach" id="features-spinach" />
+              <RakeTaskImpl description="" fullCommand="parallel:load_schema" id="load_schema" />
+              <RakeTaskImpl description="" fullCommand="parallel:load_structure" id="load_structure" />
+              <RakeTaskImpl description="" fullCommand="parallel:migrate" id="migrate" />
+              <RakeTaskImpl description="" fullCommand="parallel:prepare" id="prepare" />
+              <RakeTaskImpl description="" fullCommand="parallel:rake" id="rake" />
+              <RakeTaskImpl description="" fullCommand="parallel:rollback" id="rollback" />
+              <RakeTaskImpl description="" fullCommand="parallel:seed" id="seed" />
+              <RakeTaskImpl description="" fullCommand="parallel:setup" id="setup" />
+              <RakeTaskImpl description="" fullCommand="parallel:spec" id="spec" />
+              <RakeTaskImpl description="" fullCommand="parallel:test" id="test" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
